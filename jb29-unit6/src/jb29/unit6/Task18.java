@@ -1,6 +1,7 @@
 package jb29.unit6;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 // 18. Найти все натуральные n-значные числа, цифры в которых образуют строго возрастающую последовательность (например, 1234, 5789). Для решения задачи использовать декомпозицию.
@@ -12,15 +13,9 @@ public class Task18 {
 		int n;
 		boolean isUpperSequence;
 
-		ArrayList<Integer> A = new ArrayList<>();
+		List<Integer> A = new ArrayList<>();
 
 		n = enterIntFromConsole("n");
-
-		if (n <= 1) {
-			printResult("Please enter > ", 1);
-			System.exit(0);
-			;
-		}
 
 		for (int i = (int) Math.pow(10, n - 1); i < Math.pow(10, n); i++) {
 
@@ -76,6 +71,12 @@ public class Task18 {
 			System.out.println("Enter " + message + ": ");
 		}
 		number = scanner.nextInt();
+
+		if (number <= 1) {
+			printResult("Please enter > ", 1);
+			System.exit(0);
+			;
+		}
 
 		return number;
 

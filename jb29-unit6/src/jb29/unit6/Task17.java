@@ -1,6 +1,7 @@
 package jb29.unit6;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 // 17. Натуральное число, в записи которого n цифр, называется числом Армстронга, если сумма его цифр, возведенная в степень n, равна самому числу. Найти все числа Армстронга от 1 до k. Для решения задачи использовать декомпозицию.
@@ -13,7 +14,7 @@ public class Task17 {
 		int counterN = 0;
 		int sumN = 0;
 
-		ArrayList<Integer> A = new ArrayList<>();
+		List<Integer> A = new ArrayList<>();
 
 		k = enterIntFromConsole("k");
 

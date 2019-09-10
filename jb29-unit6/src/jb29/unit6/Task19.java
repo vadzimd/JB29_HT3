@@ -15,12 +15,6 @@ public class Task19 {
 
 		n = enterIntFromConsole("n");
 
-		if (n <= 0) {
-			printResult("Please enter > ", 0);
-			System.exit(0);
-			;
-		}
-
 		for (int i = (int) Math.pow(10, n - 1); i < Math.pow(10, n); i++) {
 
 			isOddDigitNum = true;
@@ -87,6 +81,12 @@ public class Task19 {
 			System.out.println("Enter " + message + ": ");
 		}
 		number = scanner.nextInt();
+
+		if (number <= 0) {
+			printResult("Please enter > ", 0);
+			System.exit(0);
+			;
+		}
 
 		return number;
 

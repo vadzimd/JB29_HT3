@@ -1,6 +1,7 @@
 package jb29.unit6;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 // 15. Даны натуральные числа К и N. Написать метод(методы) формирования массива А, элементами которого являются числа, сумма цифр которых равна К и которые не большее N.
@@ -13,18 +14,13 @@ public class Task16 {
 
 		n = enterIntFromConsole("n");
 
-		if (n < 2) {
-
-			n = 2;
-		}
-
 		findTwins(n);
 
 	}
 
 	public static void findTwins(int n) {
 
-		ArrayList<Integer> A = new ArrayList<>();
+		List<Integer> A = new ArrayList<>();
 
 		for (int i = n; i <= 2 * n; i += 2) {
 
@@ -60,6 +56,12 @@ public class Task16 {
 			System.out.println("Enter " + message + ": ");
 		}
 		number = scanner.nextInt();
+
+		if (number < 2) {
+			printResult("Please enter > ", 2);
+			System.exit(0);
+			;
+		}
 
 		return number;
 
